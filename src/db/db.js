@@ -1,7 +1,7 @@
 
 import { MongoClient } from 'mongodb';
 
-const DB_NAME = 'meal-tracker';
+const DB_NAME = 'members-only-key';
 
 export const db = {
     _dbClient: null,
