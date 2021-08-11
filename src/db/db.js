@@ -1,7 +1,7 @@
 
 import { MongoClient } from 'mongodb';
 
-const DB_NAME = 'members-only-key';
+const DB_NAME = 'members-only';
 
 export const db = {
     _dbClient: null,
