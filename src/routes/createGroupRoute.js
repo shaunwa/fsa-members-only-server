@@ -3,7 +3,7 @@ import { createGroup } from '../db';
 
 export const createGroupRoute = {
     method: 'post',
-    path: '/groups',
+    path: '/api/groups',
     handler: async (req, res) => {
         const token = req.headers.authtoken;
         const { name } = req.body;
@@ -11,6 +11,6 @@ export const createGroupRoute = {
         const user = await admin.auth().verifyIdToken(token);
         const newGroupId = await createGroup(name, user.user_id);
 
-        res.status(200).json({ newGroupId });
+        res.status(200).json(newGroupId);
     },
 };
